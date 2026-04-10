@@ -9,6 +9,7 @@ import MatchHistoryPage from "@/components/pages/match-history-page"
 import RoomConnectionPage from "@/components/pages/room-connection-page"
 import { syncManager } from "@/lib/sync-manager"
 import { supabase } from "@/lib/supabase"
+import SubscriptionDialog from "@/components/subscription-dialog"
 
 import { useSubscription } from "@/hooks/use-subscription"
 
@@ -46,9 +47,10 @@ export default function Page() {
   const [isSynced, setIsSynced] = useState(false)
   // NOVO: Define se é o Dono da sala (Scout) ou Espectador
   const [userRole, setUserRole] = useState<"host" | "guest">("host")
+  const [showSubscriptionDialog, setShowSubscriptionDialog] = useState(false)
 
   // Verificar assinatura quando autenticado
-  const { hasAccess: subscriptionAccess, loading: subscriptionLoading } = useSubscription()
+  const { hasAccess: subscriptionAccess, loading: subscriptionLoading, refresh: refreshSubscription } = useSubscription()
 
   // #region agent log
   useEffect(() => {
@@ -159,6 +161,11 @@ export default function Page() {
   }
 
   const handleModeSelect = (mode: "individual" | "synced") => {
+    // Verificar assinatura antes de navegar
+    if (!subscriptionAccess && !subscriptionLoading) {
+      setShowSubscriptionDialog(true)
+      return
+    }
     if (mode === "individual") {
       setView("match")
       setIsSynced(false)
@@ -167,6 +174,14 @@ export default function Page() {
       setView("room")
       setIsSynced(true)
     }
+  }
+
+  const handleHistoryClick = () => {
+    if (!subscriptionAccess && !subscriptionLoading) {
+      setShowSubscriptionDialog(true)
+      return
+    }
+    setView("history")
   }
 
   // Quem CRIA a sala é o HOST (pode anotar)
@@ -236,11 +251,18 @@ export default function Page() {
             <p className="text-sm text-green-100">Até 3 aparelhos conectados em tempo real</p>
           </button>
 
-          <button onClick={() => setView("history")} className="w-full p-6 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg shadow-lg transition-all">
+          <button onClick={handleHistoryClick} className="w-full p-6 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white rounded-lg shadow-lg transition-all">
             <h2 className="text-xl font-bold mb-2">Histórico</h2>
             <p className="text-sm text-purple-100">Visualizar partidas anteriores</p>
           </button>
         </div>
+
+        {/* Dialog de assinatura quando usuário tenta acessar sem plano */}
+        <SubscriptionDialog
+          open={showSubscriptionDialog}
+          onOpenChange={setShowSubscriptionDialog}
+          onSuccess={() => refreshSubscription()}
+        />
       </div>
     )
   }
