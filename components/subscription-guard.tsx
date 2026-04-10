@@ -135,7 +135,7 @@ export function SubscriptionGuard({ children, feature, disablePeriodic }: Subscr
             </div>
           </Card>
         </div>
-        <SubscriptionDialog open={showDialog} onOpenChange={setShowDialog} />
+        <SubscriptionDialog open={showDialog} onOpenChange={setShowDialog} onSuccess={() => checkAccess(true)} />
       </>
     )
   }
@@ -164,7 +164,7 @@ export function SubscriptionGuard({ children, feature, disablePeriodic }: Subscr
             </AlertDescription>
           </Alert>
           {children}
-          <SubscriptionDialog open={showDialog} onOpenChange={setShowDialog} />
+          <SubscriptionDialog open={showDialog} onOpenChange={setShowDialog} onSuccess={() => checkAccess(true)} />
         </>
       )
     }

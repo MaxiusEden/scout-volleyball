@@ -77,7 +77,8 @@ serve(async (req) => {
       // Atualizar assinatura no banco
       const currentPeriodEnd = new Date(validationResult.expiryTimeMillis).toISOString()
 
-      const { data: subscription, error: updateError } = await supabaseClient
+      // CORRIGIDO: Usar supabaseAdmin para bypass de RLS (igual ao caminho de produção)
+      const { data: subscription, error: updateError } = await supabaseAdmin
         .from('subscriptions')
         .upsert({
           user_id: user.id,

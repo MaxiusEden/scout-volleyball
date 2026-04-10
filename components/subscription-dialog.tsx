@@ -21,9 +21,10 @@ import { Capacitor } from "@capacitor/core"
 interface SubscriptionDialogProps {
   open: boolean
   onOpenChange: (open: boolean) => void
+  onSuccess?: () => void
 }
 
-export default function SubscriptionDialog({ open, onOpenChange }: SubscriptionDialogProps) {
+export default function SubscriptionDialog({ open, onOpenChange, onSuccess }: SubscriptionDialogProps) {
   const [loading, setLoading] = useState(false)
   const [subscription, setSubscription] = useState<any>(null)
   const [trialDays, setTrialDays] = useState(0)
@@ -61,8 +62,9 @@ export default function SubscriptionDialog({ open, onOpenChange }: SubscriptionD
           description: "Aguarde a confirmação da loja. Isso pode levar alguns segundos.",
           variant: "default",
         })
-        // Não feche o diálogo imediatamente, ou feche mas avise que vai demorar
         onOpenChange(false)
+        // Notificar o SubscriptionGuard para re-checar acesso
+        onSuccess?.()
       } else {
         toast({
           title: "Erro ao comprar",
@@ -93,6 +95,8 @@ export default function SubscriptionDialog({ open, onOpenChange }: SubscriptionD
         })
         await loadSubscription()
         onOpenChange(false)
+        // Notificar o SubscriptionGuard para re-checar acesso
+        onSuccess?.()
       } else {
         toast({
           title: "Nenhuma compra encontrada",
