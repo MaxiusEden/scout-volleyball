@@ -1,0 +1,192 @@
+Diferenças de cores entre componentes do App e Web Version:
+
+Arquivo: app-header.tsx
+  - text-black: App=1, Web=0
+  - text-white: App=0, Web=1
+
+Arquivo: charts\advanced-analytics-charts.tsx
+  - text-black: App=1, Web=0
+  - text-white: App=0, Web=1
+
+Arquivo: court-rotation-display.tsx
+  - text-black: App=7, Web=0
+  - text-white: App=0, Web=7
+
+Arquivo: eight-face-entry\eight-face-data-entry.tsx
+  - text-black: App=10, Web=0
+  - bg-white: App=6, Web=1
+  - border-slate-300: App=5, Web=0
+  - bg-slate-100: App=5, Web=0
+  - text-white: App=0, Web=1
+  - text-slate-900: App=0, Web=1
+
+Arquivo: eight-face-entry\face1-team.tsx
+  - text-black: App=2, Web=0
+  - bg-white: App=1, Web=0
+  - border-slate-300: App=1, Web=0
+  - bg-slate-100: App=1, Web=0
+
+Arquivo: eight-face-entry\face10-attacking-player.tsx
+  - text-black: App=2, Web=0
+  - bg-white: App=1, Web=0
+  - border-slate-300: App=1, Web=0
+  - bg-slate-100: App=1, Web=0
+  - text-slate-600: App=0, Web=1
+  - bg-blue-600: App=0, Web=1
+  - bg-blue-700: App=0, Web=1
+  - text-white: App=0, Web=1
+
+Arquivo: eight-face-entry\face10-blocking-player.tsx
+  - text-black: App=2, Web=0
+  - text-slate-900: App=1, Web=0
+  - bg-white: App=1, Web=0
+  - border-slate-300: App=1, Web=0
+  - bg-slate-100: App=1, Web=0
+  - text-slate-600: App=0, Web=1
+
+Arquivo: eight-face-entry\face11-blocking-player.tsx
+  - text-black: App=2, Web=0
+  - bg-white: App=1, Web=0
+  - border-slate-300: App=1, Web=0
+  - bg-slate-100: App=1, Web=0
+  - text-slate-600: App=0, Web=1
+  - bg-blue-600: App=0, Web=1
+  - bg-blue-700: App=0, Web=1
+  - text-white: App=0, Web=1
+
+Arquivo: eight-face-entry\face11-transition.tsx
+  - text-black: App=2, Web=0
+  - bg-white: App=1, Web=0
+  - border-slate-300: App=1, Web=0
+  - bg-slate-100: App=1, Web=0
+
+Arquivo: eight-face-entry\face12-transition.tsx
+  - text-black: App=2, Web=0
+  - text-slate-600: App=0, Web=1
+  - text-white: App=0, Web=1
+
+Arquivo: eight-face-entry\face2-player.tsx
+  - text-black: App=2, Web=0
+  - text-slate-900: App=1, Web=0
+  - bg-white: App=1, Web=0
+  - border-slate-300: App=1, Web=0
+  - bg-slate-100: App=1, Web=0
+  - text-slate-600: App=0, Web=1
+
+Arquivo: eight-face-entry\face3-serve.tsx
+  - text-black: App=4, Web=0
+  - bg-white: App=3, Web=0
+  - border-slate-300: App=3, Web=0
+  - bg-slate-100: App=3, Web=0
+
+Arquivo: eight-face-entry\face4-serve-zone.tsx
+  - text-black: App=2, Web=0
+  - bg-white: App=1, Web=0
+  - border-slate-300: App=1, Web=0
+  - bg-slate-100: App=1, Web=0
+
+Arquivo: eight-face-entry\face5-pass-quality.tsx
+  - text-black: App=5, Web=0
+  - bg-white: App=4, Web=0
+  - border-slate-300: App=4, Web=0
+  - bg-slate-100: App=4, Web=0
+
+Arquivo: eight-face-entry\face6-passing-player.tsx
+  - text-black: App=2, Web=0
+  - text-slate-900: App=1, Web=0
+  - bg-white: App=1, Web=0
+  - border-slate-300: App=1, Web=0
+  - bg-slate-100: App=1, Web=0
+  - text-slate-600: App=0, Web=1
+
+Arquivo: eight-face-entry\face7-attacking-team.tsx
+  - text-black: App=2, Web=0
+  - bg-white: App=1, Web=0
+  - border-slate-300: App=1, Web=0
+  - bg-slate-100: App=1, Web=0
+
+Arquivo: eight-face-entry\face8-attack-position.tsx
+  - text-black: App=2, Web=0
+  - bg-white: App=1, Web=0
+  - border-slate-300: App=1, Web=0
+  - bg-slate-100: App=1, Web=0
+
+Arquivo: eight-face-entry\face9-defense-player.tsx
+  - text-black: App=1, Web=0
+
+Arquivo: eight-face-entry\face9-result-type.tsx
+  - text-black: App=5, Web=0
+  - bg-white: App=4, Web=0
+  - border-slate-300: App=4, Web=0
+  - bg-slate-100: App=4, Web=0
+
+Arquivo: heatmaps\advanced-analytics-dashboard.tsx
+  - text-black: App=4, Web=0
+  - text-white: App=0, Web=4
+
+Arquivo: heatmaps\modern-stats-dashboard.tsx
+  - text-black: App=6, Web=0
+  - text-white: App=0, Web=6
+
+Arquivo: heatmaps\serve-zone-analysis.tsx
+  - text-black: App=2, Web=0
+  - text-white: App=0, Web=2
+
+Arquivo: pages\login-page.tsx
+  - text-black: App=6, Web=0
+  - text-white: App=0, Web=6
+
+Arquivo: pages\match-data-entry-page.tsx
+  - bg-slate-900: App=1, Web=0
+  - text-black: App=4, Web=0
+  - text-slate-400: App=1, Web=0
+  - text-slate-500: App=1, Web=0
+  - bg-white: App=2, Web=1
+  - bg-blue-50: App=1, Web=0
+  - border-blue-200: App=1, Web=0
+  - text-slate-800: App=1, Web=0
+  - text-slate-600: App=1, Web=0
+  - bg-blue-600: App=1, Web=0
+  - bg-blue-700: App=1, Web=0
+  - bg-green-600: App=2, Web=1
+  - bg-slate-800: App=1, Web=0
+  - bg-slate-700: App=1, Web=0
+  - from-green-50: App=0, Web=1
+  - to-blue-50: App=0, Web=1
+  - border-gray-200: App=0, Web=1
+  - bg-gray-50: App=0, Web=1
+  - text-green-600: App=0, Web=1
+
+Arquivo: pages\match-setup-page.tsx
+  - text-black: App=2, Web=0
+  - text-white: App=0, Web=2
+
+Arquivo: pages\room-connection-page.tsx
+  - text-slate-600: App=5, Web=6
+  - text-black: App=4, Web=0
+  - text-white: App=0, Web=4
+
+Arquivo: set-progression-visualization.tsx
+  - text-black: App=3, Web=0
+  - text-white: App=0, Web=3
+
+Arquivo: spreadsheets\player-stats-spreadsheet.tsx
+  - text-black: App=2, Web=0
+  - text-white: App=0, Web=2
+
+Arquivo: team-roster-management.tsx
+  - text-black: App=1, Web=0
+  - text-white: App=0, Web=1
+
+Arquivo: transitions-dashboard.tsx
+  - text-black: App=9, Web=0
+  - text-white: App=0, Web=9
+
+Arquivo: ui\badge.tsx
+  - text-black: App=1, Web=0
+  - text-white: App=0, Web=1
+
+Arquivo: ui\button.tsx
+  - text-black: App=1, Web=0
+  - text-white: App=0, Web=1
+

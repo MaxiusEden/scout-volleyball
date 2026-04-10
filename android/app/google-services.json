@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "580179896635",
+    "project_id": "scout-volleyball-99c1f",
+    "storage_bucket": "scout-volleyball-99c1f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580179896635:android:87666162379449aa7caf1e",
+        "android_client_info": {
+          "package_name": "com.vscout.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG9xMCN_tuWz4dyQ-ACE4pY4XVshcous0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

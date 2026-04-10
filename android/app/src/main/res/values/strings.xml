@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Scout Volleyball</string>
+    <string name="title_activity_main">Scout Volleyball</string>
+    <string name="package_name">com.vscout.app</string>
+    <string name="custom_url_scheme">com.vscout.app</string>
+    <string name="server_client_id">728215447744-ukodpj33kdcsa3tqhek374u9nvkqnbiv.apps.googleusercontent.com</string>
+    <string name="billing_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuV0FE9aw3lFaLKspCVKAwMj1N8cpvZ4i6TEukykRxOUyf0GF97rqHw9z0wpSmqlxJe+AgXzWw5iEFNyH/gBdz1EvdJ80aSEJkhL2LS2tlVBtLJRt2+AcgmCv5mef3YQdZeKmt5dpNQEUD6GzSPm9YNWTcd+uNDVEsKAsg9utpyJwJCHY9uXrBF2dPN/rq4V7CAHrdb1NhH/6IpmbBfARDaC6aNIi+pf/qi0nvZwN8HHclqUu+lpD6PMXsW+oaAz5hPVpXZvRJpN/005c+4NyrWgBw+oXpA5ROosYeHLo3aGPhOszCG0SXvgfywamgrkQLZxcUMuVEVhs+QOI/XOQVwIDAQAB</string>
+</resources>

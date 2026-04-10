@@ -1,0 +1,5 @@
+Arquivos e Funcionalidades presentes no Web Version, mas AUSENTES no App:
+
+### Outros
+- .gitignore
+
