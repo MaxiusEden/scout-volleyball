@@ -27,6 +27,18 @@ serve(async (req) => {
       }
     )
 
+    // Cliente Admin para bypass de RLS (necessário para atualizar a tabela subscriptions)
+    const supabaseAdmin = createClient(
+      Deno.env.get('SUPABASE_URL') ?? '',
+      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '',
+      {
+        auth: {
+          autoRefreshToken: false,
+          persistSession: false
+        }
+      }
+    )
+
     const { data: { user }, error: userError } = await supabaseClient.auth.getUser()
     if (userError || !user) {
       return new Response(
@@ -82,7 +94,8 @@ serve(async (req) => {
     // Atualizar assinatura no banco
     const currentPeriodEnd = new Date(validationResult.expiresDate).toISOString()
     
-    const { data: subscription, error: updateError } = await supabaseClient
+    // CORRIGIDO: Usar supabaseAdmin para bypass de RLS
+    const { data: subscription, error: updateError } = await supabaseAdmin
       .from('subscriptions')
       .upsert({
         user_id: user.id,
